@@ -36,7 +36,7 @@ public class WeatherServise {
 		} catch (Exception e) {
 			log.error(e.getMessage());
 			throw new ResponseStatusException(
-					HttpStatus.INTERNAL_SERVER_ERROR,
+					HttpStatus.BAD_GATEWAY,
 					"Exception while calling endpint ",
 					e
 					);
