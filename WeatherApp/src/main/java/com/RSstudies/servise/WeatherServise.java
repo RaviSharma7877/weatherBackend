@@ -23,7 +23,7 @@ public class WeatherServise {
     private static final String XRapidAPIKey = "20ff479bccmsha2fc0220fbb7f2ap119675jsnada6d90b3a5f";
     private static final String XRapidAPIHost= "forecast9.p.rapidapi.com";
 
-    @CrossOrigin(origins = "https://main--weatherforcastdata.netlify.app/") // Add CrossOrigin annotation with allowed origin
+    @CrossOrigin(origins = "*") // Add CrossOrigin annotation with allowed origin
     public Object getDataList(String country) {
 
         try {
