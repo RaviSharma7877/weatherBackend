@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.RSstudies.servise.WeatherServise;
+import com.RSstudies.servise.WeatherService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -13,10 +13,10 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class WeatherController {
 
-	private final WeatherServise weatherService;
+	private final WeatherService weatherService;
 	
 	@GetMapping("/getweatherdata")
 	public ResponseEntity<?> getData(@RequestParam String country) {
-		return ResponseEntity.ok(weatherService.getdataList(country));
+		return ResponseEntity.ok(weatherService.getDataList(country));
 	}
 }

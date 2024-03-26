@@ -15,7 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Service
 @Slf4j
-public class WeatherServise {
+public class WeatherService {
 
     @Autowired
     private RestTemplate restTemplate;
@@ -23,7 +23,7 @@ public class WeatherServise {
     private static final String XRapidAPIKey = "5e3134c76amsh5cc4891dcc4ecd6p104170jsnf6803a56aedb";
     private static final String XRapidAPIHost= "forecast9.p.rapidapi.com";
 
-    @CrossOrigin(origins = "http://localhost:3000") // Add CrossOrigin annotation with allowed origin
+    @CrossOrigin(origins = "https://main--weatherforcastdata.netlify.app/") // Add CrossOrigin annotation with allowed origin
     public Object getDataList(String country) {
 
         try {
